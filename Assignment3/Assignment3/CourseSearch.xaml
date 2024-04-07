@@ -1,0 +1,23 @@
+﻿<Window x:Class="Assignment3.CourseSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment3"
+        mc:Ignorable="d"
+        Title="CourseSearch" Height="450" Width="800">
+    <Grid>
+        <ListView Name="courseList" ItemsSource="{Binding}" Margin="0,48,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="300" Header="Student" DisplayMemberBinding="{Binding Path=Name}" />
+                        <GridViewColumn Width="150" Header="Karakter" DisplayMemberBinding="{Binding Path=Grade}" />
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox Name="dropBoxCourse" HorizontalAlignment="Left" Margin="22,13,0,0" VerticalAlignment="Top" Width="157" Height="22" DisplayMemberPath="Coursename"/>
+        <Button Name="sButton" Content="Søk" HorizontalAlignment="Left" Margin="184,13,0,0" VerticalAlignment="Top" Click="sButton_Click_1" Height="22" Width="74" />
+    </Grid>
+</Window>
